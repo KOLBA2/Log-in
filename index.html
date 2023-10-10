@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Log-in form</title>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <div class="main">
+         <div class="right">
+            <div class="half-background">
+               <div class="INTIME"><h1>INTIME</h1></div>
+               <div class="left-side-text">
+                  <div class="text-side"><h1>Welcome to InTime!</h1>
+                     <p class="txt">Register if you want to become a part of InTime.</br> Our creative websites won’t leave you</br> disappointed.</p></div>
+                  <img class="img" src="./1.png" alt="">
+               </div>
+
+            </div>
+         </div>
+      </div>
+      <div class="left">
+        <div class="E">
+           <div class="form-container">
+              <h1 class="title">Create your account</h1>
+              <br>
+              <h4 class="text">Would you like to work with us?</h4>
+              <br>
+              <form id="loginForm" onsubmit="return validateForm()">
+                 <div class="form-group">
+                    <P class="title2">E-mail</P>
+                    <input class="input" type="email" placeholder="Type your e-mail" id="email" name="email" required>
+                 </div><br>
+                 <div class="form-group">
+                    <p class="title2">Password</p>
+                    <input class="input" type="password" placeholder="Type your password" id="password" name="password" required>
+                    <p class="error-message" id="passwordError"></p>
+                 </div><br>
+                 <div class="form-group">
+                    <p class="title2">Repeat Password</p>
+                    <input class="input" type="password" placeholder="Repeat your password" id="confirmPassword" name="confirmPassword" required>
+                    <p class="error-message" id="confirmPasswordError"></p>
+                    <p class="lil-text">Must be 8 characters at least</p>
+                 </div><br>
+                 <div>
+                    <p class="dp">Choose desired job position</p>
+                    <div class="form-group">
+                     <div class="dropdown">
+                       <input class="text-box" type="text" placeholder="Job Position" readonly>
+                       <div class="options">
+                          <div onclick="show('Senior developer')">Senior developer</div>
+                          <div onclick="show('Junior developer')">Junior developer</div>
+                          <div onclick="show('UI/UX designer')">UI/UX designer</div>
+                          <div onclick="show('Project manager')">Project manager</div> 
+                          <div onclick="show('QA')">QA</div>
+                       </div>
+                    </div>
+                 </div>
+               </div><br>
+                 <div class="checkbox">
+                    <div class="form-group">
+                       <p class="gender">Select your gender</p>
+                       <br>
+                       <label>
+                       <input id="male" class="male" type="checkbox" name="gender" value="male"><a class="male2">Male</a>
+                       </label>
+                       <label>
+                       <input id="female" class="female" type="checkbox" name="gender" value="female"><a class="female2">Female</a>
+                       </label>
+                    </div>
+                    <div class="form-group">
+                       <input class="agree"  onchange="check(event)"  type="checkbox"> <p class="terms">By creating account means
+                         you agree <a class="link"  href="https://www.termsfeed.com/blog/sample-terms-and-conditions-template/">Terms and 
+                           <br> Conditions</a>  and our <a  class="link" href="https://termly.io/resources/templates/privacy-policy-template/">
+                           privacy policy</a></p>
+                       <br>
+                    </div>
+                    <div class="form-group">
+                       <button id="button"  class="btn" type="Sign-Up" disabled>Sign Up</button>
+                    </div>
+              </form>
+              </div>
+           </div>
+        </div>
+     </div>
+      <script src="./script.js"></script>
+   </body>
+</html>
